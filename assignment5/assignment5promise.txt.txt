@@ -1,0 +1,77 @@
+Question 1:
+// Resolving a promise
+p.then(value => console.log(value));
+p.then(value => console.log(value));
+
+
+
+Question 2:
+// Catching errors in promise
+const p = Promise.reject(new Error('Oops!'));
+p.catch(error => console.error(error));
+
+
+
+Question 3:
+// Chaining promises
+const p = Promise.resolve({ id: 1, name: 'Alice' });
+p.then(value => console.log(value));
+
+
+Question 4:
+// Using finally
+const p = Promise.resolve({ id: 1, name: 'Alice' });
+p.then(value => console.log(value.name))
+ .finally(() => console.log('Promise is settled'));
+
+
+Question 5:
+// Handling promise rejection with then
+const p = Promise.reject(new Error('Invalid id'));
+p.catch(error => console.error(error));
+
+
+Question 6:
+// Creating a new promise
+const p = Promise.resolve(42);
+p.finally(() => console.log('Promise settled'));
+
+
+Question 7:
+// Async function with await
+const p = Promise.resolve(21);
+p.then(value => console.log(value * 2));
+
+
+Question 8:
+// Promise.all example
+const p = Promise.reject(new Error('Invalid value'));
+Promise.all([p.catch(() => 0)]).then(values => console.log(values[0]));
+
+
+Question 9:
+// Promise.race example
+const promises = [
+  Promise.resolve(1),
+  Promise.resolve(2),
+  Promise.resolve(3)
+];
+
+Promise.all(promises).then(values => console.log(values));
+
+
+Question 10:
+// Promise.reject example
+Promise.reject('Error occurred').catch(error => console.error(error));
+promise.
+
+Bonus Question:
+// Async/Await with try-catch
+const p = Promise.resolve('World');
+p.then(value => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('Hello ' + value);
+    }, 1000);
+  });
+}).then(result => console.log(result));
